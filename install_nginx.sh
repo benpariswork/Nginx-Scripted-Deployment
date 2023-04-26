@@ -4,6 +4,12 @@
 ### This script is based on the documentation for installing Nginx Open Source found here: https://nginx.org/en/linux_packages.html
 ### It should be noted that the prerequisite gpgv is a replacement for an outdated package from the documnetation, 'gnupg2'.
 
+# Check if the user is running as root
+if [ "$EUID" -ne 0 ]
+  then echo "Please run this script as root"
+  exit 1
+fi
+
 # Install prerequisites
 
 sudo apt install -y curl gpgv ca-certificates lsb-release ubuntu-keyring

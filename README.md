@@ -65,10 +65,10 @@ While the web has progressed a lot, sometimes all you need is a static HTTP serv
 
 Now that you have a shell into your server, follow these steps to install and initialize <a href="https://nginx.org/en/docs/">Nginx</a>:
 
-* ```nano``
-    * This command updates the apt package manager.
+* ```curl -o install_nginx.sh https://raw.githubusercontent.com/benpariswork/Nginx-Scripted-Deployment/main/install_nginx.sh```
+    * This command downloads the install script to ```./install_nginx.sh```.
 
-* ```sudo apt install nginx```
+* ```chmod```
     * This command enable the firewall to filter incoming traffic.
     * You will be given this promt ```After this operation, 7919 kB of additional disk space will be used.Do you want to continue? [Y/n] ?```
     * Enter ```y``` to install Nginx.
