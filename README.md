@@ -98,7 +98,7 @@ Now that you have a shell into your server, follow these steps to install and in
 
 ![copy Screenshot](/img/copy.png)
 
-![paste Running Screenshot](/img/paste.png)
+![paste Running Screenshot](/img/paste2.png)
 
 * You should see the default nginx index.html file (see below).
 
