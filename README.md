@@ -43,7 +43,7 @@ While the web has progressed a lot, sometimes all you need is a static HTTP serv
 
 ![Create Screenshot](/img/create.png)
 
-### Connect to Ubuntu program
+### Connect to Ubuntu Instance
 
 * After creating your Ubuntu instance you will see a list of your instances, wait for your instance to say ```Running```.
 
@@ -63,9 +63,9 @@ While the web has progressed a lot, sometimes all you need is a static HTTP serv
 
 ### Installing and Running Nginx
 
-Now that you have a shell into your server, run the following commands:
+Now that you have a shell into your server, follow these steps to install and initialize <a href="https://nginx.org/en/docs/">Nginx</a>:
 
-* ```sudo apt update```
+* ```nano ```
     * This command updates the apt package manager.
 
 * ```sudo apt install nginx```
