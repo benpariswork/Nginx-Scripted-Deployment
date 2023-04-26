@@ -35,6 +35,10 @@ While the web has progressed a lot, sometimes all you need is a static HTTP serv
 
 ![Select Instance Plan Screenshot](/img/plan.png)
 
+* Give your instance a name, for this project I used ```Linux-HTTP-Server```.
+
+![Select Instance Name Screenshot](/img/name.png)
+
 * Click the ```Create instance``` button to finish initializing your instance.
 
 ![Create Screenshot](/img/create.png)
