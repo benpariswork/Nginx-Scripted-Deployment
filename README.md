@@ -65,7 +65,7 @@ While the web has progressed a lot, sometimes all you need is a static HTTP serv
 
 Now that you have a shell into your server, follow these steps to install and initialize <a href="https://nginx.org/en/docs/">Nginx</a>:
 
-* ```nano ```
+* ```nano``
     * This command updates the apt package manager.
 
 * ```sudo apt install nginx```
