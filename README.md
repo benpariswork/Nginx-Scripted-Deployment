@@ -1,6 +1,6 @@
 # Deploy Nginx with a Bash script
 
-Follow along as I deploy <a href="https://nginx.org/en/docs/">Nginx</a> on an Ubuntu instance via <a href="https://aws.amazon.com/free/compute/lightsail/">AWS Lightsail</a> and a bash script I wrote using <a href="https://openai.com/blog/chatgpt">ChatGPT</a>.
+Follow along as I deploy <a href="https://nginx.org/en/docs/">Nginx</a> on an Ubuntu instance via <a href="https://aws.amazon.com/free/compute/lightsail/">AWS Lightsail</a> and a bash script I wrote using <a href="https://openai.com/blog/chatgpt">ChatGPT</a>. This project is based on official Nginx Documentation found <a href="https://nginx.org/en/linux_packages.html">here</a>.
 
 ## Description
 
