@@ -1,4 +1,4 @@
-# Deploy Nginx a Bash script
+# Deploy Nginx with a Bash script
 
 Follow along as I deploy <a href="https://nginx.org/en/docs/">Nginx</a> on an Ubuntu instance via AWS Lightsail and a bash script I wrote using <a href="https://openai.com/blog/chatgpt">ChatGPT</a>.
 
