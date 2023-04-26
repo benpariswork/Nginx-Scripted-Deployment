@@ -65,56 +65,46 @@ While the web has progressed a lot, sometimes all you need is a static HTTP serv
 
 Now that you have a shell into your server, follow these steps to install and initialize <a href="https://nginx.org/en/docs/">Nginx</a>:
 
-* ```curl -o install_nginx.sh https://raw.githubusercontent.com/benpariswork/Nginx-Scripted-Deployment/main/install_nginx.sh```
+* Run the command: ```curl -o install_nginx.sh https://raw.githubusercontent.com/benpariswork/Nginx-Scripted-Deployment/main/install_nginx.sh```
     * This command downloads the install script to ```./install_nginx.sh```.
 
-* ```chmod```
-    * This command enable the firewall to filter incoming traffic.
-    * You will be given this promt ```After this operation, 7919 kB of additional disk space will be used.Do you want to continue? [Y/n] ?```
-    * Enter ```y``` to install Nginx.
+* Run the command: ```chmod +x install_nginx.sh```
+    * This command will make the script we just installed executable.
 
-* ```sudo ufw allow 'Nginx HTTP'```
-    * This command update the firewall to allow for Nginx HTTP traffic.
-    * As this project is meant for simple implementations where security is not at risk, we will only use HTTP, not HTTPS.
+* Run the command: ```sudo ./install_nginx.sh```
+    * This command will run the install script with superuser privelages.
+    * Some of the commands in this script require superuser privelages, the script should return an error if sudo is not used.
+    * Please read this script before running, this is a best practice to avoid running malicous code.
 
-* ```sudo ufw allow 'OpenSSH'```
-    * This command update the firewall to allow for SSH traffic.
-    * This is important in order to avoid terminating the current SSH connection.
+* While the script is running, you will be presented with two 'keys' (see example below).
+    * This step is in place to avoid downloading corrupt files.
+    * Evaluate the two keys, if they are different enter ```n```, if they are the same enter ```y```.
+    * If ```n``` is entered the file just downloaded will be considered corrupt and be deleted.
+    * If ```y``` is entered then the script will continue with the installation process.
 
-* ```sudo ufw enable```
-    * This command enables the firewall to filter incoming traffic.
-    * You will be given this promt ```Command may disrupt existing ssh connections. Proceed with operation (y|n)?```
-    * Enter ```y``` to enable firewall.
+![Fingerprints Screenshot](/img/fingerprints.png) 
 
-* ```sudo ufw status numbered```
-    * This command will return a numbered list of the active firewall rules.
-    * Use this information to check that your firewall is running properly, compare to below.
-![Rules Screenshot](/img/rules.png)
+* Once the script has finished running, you should see "NGINX is now RUNNING" like below.
 
-* ```nginx status```
-    * This command will return a report on the status of the Nginx service.
-    * Use this information to check that your server is running properly, compare to below.
-![Status Screenshot](/img/status.png)
+![Nginx Running Screenshot](/img/nginx-running.png)
 
-* ```curl -4 https://icanhazip.com/```
-    * This command will return our IPV4 address in order to test that our server is serving content.
-    * If we have completed these steps correctly, entering the IPV4 address into our browser will return the landing page below.
-![Landing Screenshot](/img/landing.png)
 
-### Replace Nginx Default with custom content
+### Check to make sure HTTP endpoint is running
 
-* ```sudo rm /usr/share/nginx/html/index.html```
+* Navigate to your AWS Lightsail console and locate your instance running <a href="https://nginx.org/en/docs/">Nginx</a>. 
     * This command will delete the default Nginx HTML landing page file.
 
-* ```git clone https://github.com/benpariswork/static_portfolio```
-    * This command will download the content for my static website.
+* Copy the instance IP address and paste it into your browser (seen below), press the enter button.
 
-* ```sudo mv /home/ubuntu/static_portfolio/* /var/www/html/```
-    * This command will move the content for my static website to the html directory configured in the Nginx configuration file.
+![copy Screenshot](/img/copy.png)
 
-* When we return to our browser pointed to the server IP address, reloading the page should reveal the portfolio.
+![paste Running Screenshot](/img/paste.png)
 
-### We have now succesfully set up a simple HTTP web server.
+* You should see the default nginx index.html file (see below).
 
+![Nginx Screenshot](/img/nginx.png)
 
+### Notes
+
+###### This project is very basic but I plan to reference it in more complex projects.
 
